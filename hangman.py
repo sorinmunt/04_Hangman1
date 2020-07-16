@@ -105,6 +105,14 @@ def mask_something(some_list_3):
     return masked_object
 
 
+def change_mask(some_list_4):
+    old_mask = some_list_4
+    string_list = list(old_mask)
+    string_list[input_letter_index]=input_letter
+    new_mask = "".join(string_list)
+
+    return new_mask
+
 
 
 
@@ -183,10 +191,12 @@ while life > 0 and mask_of_the_chosen_country.count("*") > 0:
 
         # start changing the mask ***** with input letters
 
-        old_mask_of_the_chosen_country = mask_of_the_chosen_country
-        string_list = list(old_mask_of_the_chosen_country)
-        string_list[input_letter_index]=input_letter
-        new_mask_of_the_chosen_country = "".join(string_list)
+        # old_mask_of_the_chosen_country = mask_of_the_chosen_country
+        # string_list = list(old_mask_of_the_chosen_country)
+        # string_list[input_letter_index]=input_letter
+        # new_mask_of_the_chosen_country = "".join(string_list)
+
+        new_mask_of_the_chosen_country = change_mask(mask_of_the_chosen_country)
 
         print("the chosen country: " + new_mask_of_the_chosen_country)
 
